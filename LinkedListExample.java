@@ -71,8 +71,14 @@ class LinkedList {
         Node n = this.root;
         String s = "";
         while(n != null) {
-            s += n.value + " ";
-            n = n.next;
+            if(n.next == null){
+                s += n.value;
+                n = n.next;
+            }
+            else{
+                s += n.value + " ";
+                n = n.next;
+            }
         }
         return s;
     }
